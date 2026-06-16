@@ -17,3 +17,4 @@ Last updated by Claude Code.
 2026-06-16 14:35:43 UTC — End-to-end: Gemini key injection FIXED (extract 200 OK, candidates returned). Now blocked at candidate write — events table has no 'detail' column the pipeline INSERTs (schema/code drift vs §6). Worker stable. Needs a decision: add events.detail migration vs map to existing cols.
 2026-06-16 15:11:22 UTC — iOS wiring session start — pointing app at live App Runner API, rebranding YodaClaw→Maven (ios/ only, parallel-safe)
 2026-06-16 15:15:44 UTC — M020 applied. End-to-end found a 3rd schema/code drift: entity_map missing child_id (re-id of child_token). M021 written + verified on ephemeral pg (process_job PROCESS_OK). Security review in progress; will apply + complete end-to-end on APPROVE.
+2026-06-16 15:19:25 UTC — iOS wired to live backend — API URL updated, app renamed Maven (bundle com.morningsidedesign.maven, /auth/apple, API-driven child colors). BUILD SUCCEEDED, pushed to main 8c3fa88
