@@ -18,3 +18,4 @@ Last updated by Claude Code.
 2026-06-16 15:11:22 UTC — iOS wiring session start — pointing app at live App Runner API, rebranding YodaClaw→Maven (ios/ only, parallel-safe)
 2026-06-16 15:15:44 UTC — M020 applied. End-to-end found a 3rd schema/code drift: entity_map missing child_id (re-id of child_token). M021 written + verified on ephemeral pg (process_job PROCESS_OK). Security review in progress; will apply + complete end-to-end on APPROVE.
 2026-06-16 15:19:25 UTC — iOS wired to live backend — API URL updated, app renamed Maven (bundle com.morningsidedesign.maven, /auth/apple, API-driven child colors). BUILD SUCCEEDED, pushed to main 8c3fa88
+2026-06-16 15:25:30 UTC — END-TO-END EXTRACTION COMPLETE ✅ — test email → Gemini Flash → candidate events row (title='practice', conf 0.9, band review, status proposed) for family 11111111. Fixes: M019 row-factory, Gemini key-injection (api_key JSON field), M020 events.detail, M021 entity_map.child_id. Worker live & stable.
