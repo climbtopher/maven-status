@@ -8,3 +8,4 @@ Last updated by Claude Code.
 2026-06-16 11:10:28 UTC — Morning setup complete — family email set, M018 migrated, pipeline worker live with Gemini Flash
 2026-06-16 12:05:08 UTC — SDK fix deployed — Gemini Flash extraction live
 2026-06-16 13:00:21 UTC — End-to-end test BLOCKED — pipeline crashes on real Postgres (dict(row) on tuple at pipeline.py:410; codebase row-factory mismatch). Worker scaled to 0. Needs HIGH-blast-radius db.py/de-id fix + review. Diagnosis ready for Chris.
+2026-06-16 13:28:54 UTC — Session start — Maven row factory fix. Running Gate 1 diagnostic (read-only).
