@@ -6,3 +6,4 @@ Last updated by Claude Code.
 2026-06-16 10:22:00 UTC — Migration renamed M016→M018 audit_log hash chain
 2026-06-16 10:41:14 UTC — Morning check — reading Phase 2 report
 2026-06-16 11:10:28 UTC — Morning setup complete — family email set, M018 migrated, pipeline worker live with Gemini Flash
+2026-06-16 12:05:08 UTC — SDK fix deployed — Gemini Flash extraction live
