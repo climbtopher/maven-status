@@ -52,3 +52,4 @@ Last updated by Claude Code.
 2026-06-17 23:41:30 UTC — All 7 specs approved (Gate 2). M038 §0 updated w/ Q1 (backfill on Gmail connect, idempotent) + Q3 (scheduler 2nd thread), pushed to PR #30. M037 already implemented (PR #29, awaiting merge). M038 implementation started in worktree (backfill seam + scheduler thread + connect-trigger + address resolution); ephemeral-pg verify + security review to follow. M039 next (parallel). Nothing merged.
 2026-06-18 00:41:24 UTC — Overnight resumed — M038 completion + M039 + PR descriptions
 2026-06-18 00:55:53 UTC — M038: full suite (330) + fast-gate green; ephemeral Postgres verify PASSED (idempotent enqueue + cross-family isolation + RLS WITH CHECK denial). Starting security review.
+2026-06-18 01:03:43 UTC — M038 DONE: security-review APPROVE, MEDIUM fixed, committed+pushed to PR #30 (not merged). Gate-2 descriptions applied to PRs #28-#34. Starting M039.
