@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Maven Control Panel</title>
+<style>
+  :root{
+    --bg:#0F1B2D; --panel:#16263d; --panel2:#1b2f4a; --line:#26405f;
+    --amber:#F59E0B; --amber-dim:#b9770a;
+    --text:#ffffff; --muted:#9fb3c8;
+    --green:#2ecc71; --red:#e74c3c; --grey:#7c8ea3;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%}
+  a{color:var(--amber)}
+  header{position:sticky;top:0;z-index:5;background:rgba(15,27,45,.96);
+    backdrop-filter:blur(8px);padding:14px 16px calc(14px + env(safe-area-inset-top));
+    border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+  header h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
+  header .dot{width:9px;height:9px;border-radius:50%;background:var(--grey)}
+  header .spacer{flex:1}
+  header button{font-size:13px}
+  main{padding:16px 16px calc(40px + env(safe-area-inset-bottom));max-width:760px;margin:0 auto}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:14px 14px 4px;margin:0 0 16px}
+  .panel > h2{font-size:13px;text-transform:uppercase;letter-spacing:.9px;color:var(--amber);
+    margin:0 0 12px;font-weight:700}
+  .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:8px 0;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  .row .k{color:var(--muted);font-size:13px}
+  .row .v{text-align:right;font-weight:600}
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:12px;
+    padding:12px;margin:0 0 12px}
+  .card h3{margin:0 0 4px;font-size:15px}
+  .card p{margin:6px 0;color:var(--muted);font-size:13.5px}
+  .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0}
+  .badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;
+    text-transform:uppercase;letter-spacing:.5px;border:1px solid transparent;white-space:nowrap}
+  .b-LOW{background:rgba(46,204,113,.15);color:var(--green);border-color:rgba(46,204,113,.4)}
+  .b-MEDIUM{background:rgba(245,158,11,.15);color:var(--amber);border-color:rgba(245,158,11,.45)}
+  .b-HIGH{background:rgba(231,76,60,.15);color:var(--red);border-color:rgba(231,76,60,.45)}
+  .b-GREY{background:rgba(124,142,163,.15);color:var(--muted);border-color:rgba(124,142,163,.35)}
+  .chk{font-size:11px;font-weight:600;padding:2px 7px;border-radius:6px;border:1px solid var(--line)}
+  .ok{color:var(--green)} .bad{color:var(--red)} .pend{color:var(--muted)}
+  .btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+  button{appearance:none;cursor:pointer;border-radius:10px;padding:10px 14px;font-size:14px;
+    font-weight:600;border:1px solid var(--line);background:var(--panel2);color:var(--text)}
+  button.primary{background:var(--amber);color:#1a1206;border-color:var(--amber)}
+  button.danger{background:transparent;color:var(--red);border-color:rgba(231,76,60,.5)}
+  button:active{transform:translateY(1px)}
+  button:disabled{opacity:.5}
+  .ghost{background:transparent;border-color:var(--line);color:var(--muted)}
+  .timeline .t{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+  .timeline .t:last-child{border-bottom:0}
+  .timeline .ts{color:var(--amber);font-size:11.5px;font-variant-numeric:tabular-nums}
+  .muted{color:var(--muted)} .small{font-size:12.5px}
+  .empty{color:var(--muted);font-size:13.5px;padding:6px 0 12px}
+  /* token gate */
+  #gate{position:fixed;inset:0;background:var(--bg);z-index:50;display:none;
+    padding:24px 20px calc(24px + env(safe-area-inset-bottom));overflow:auto}
+  #gate .box{max-width:520px;margin:6vh auto 0}
+  #gate h2{color:var(--amber);margin:0 0 6px}
+  #gate p{color:var(--muted);font-size:14px}
+  #gate ul{color:var(--muted);font-size:13.5px;padding-left:18px}
+  #gate code{background:var(--panel2);padding:1px 5px;border-radius:5px;color:#fff}
+  #gate input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);
+    background:var(--panel);color:#fff;font-size:15px;margin:10px 0}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:60;
+    background:var(--panel2);border:1px solid var(--line);border-radius:10px;
+    padding:10px 16px;font-size:13.5px;max-width:90vw;box-shadow:0 8px 24px rgba(0,0,0,.4);
+    opacity:0;transition:opacity .2s;pointer-events:none}
+  .toast.show{opacity:1}
+  .spin{display:inline-block;width:14px;height:14px;border:2px solid var(--line);
+    border-top-color:var(--amber);border-radius:50%;animation:s .7s linear infinite;vertical-align:-2px}
+  @keyframes s{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<header>
+  <span class="dot" id="hdrDot"></span>
+  <h1>Maven Control Panel</h1>
+  <span class="spacer"></span>
+  <button class="ghost" id="refreshBtn" title="Refresh">↻</button>
+  <button class="ghost" id="signoutBtn">Sign out</button>
+</header>
+
+<main id="app">
+  <section class="panel" id="p1"><h2>Current Status</h2><div id="p1body" class="empty">Loading…</div></section>
+  <section class="panel" id="p2"><h2>Spec Approval Queue</h2><div id="p2body" class="empty">Loading…</div></section>
+  <section class="panel" id="p3"><h2>Implementation PRs · ready to merge</h2><div id="p3body" class="empty">Loading…</div></section>
+  <section class="panel" id="p4"><h2>Recent Activity</h2><div id="p4body" class="empty">Loading…</div></section>
+  <p class="small muted" style="text-align:center;margin-top:24px">
+    Token stored only in this browser (localStorage). Reads/writes go straight to the GitHub API.
+    Use a <b>fine-grained</b> token limited to <code>maven</code> + <code>maven-status</code>.
+  </p>
+</main>
+
+<!-- Token gate -->
+<div id="gate"><div class="box">
+  <h2>Connect to GitHub</h2>
+  <p>One-time setup. Paste a GitHub <b>fine-grained personal access token</b>. It is stored only in
+     this browser and never leaves it except in calls to <code>api.github.com</code>.</p>
+  <p><b>Recommended scope (least privilege):</b></p>
+  <ul>
+    <li>Resource owner: <code>climbtopher</code></li>
+    <li>Only select repositories: <code>maven</code>, <code>maven-status</code></li>
+    <li>Permissions: <b>Pull requests</b> Read &amp; write, <b>Contents</b> Read &amp; write, <b>Metadata</b> Read</li>
+  </ul>
+  <p class="small">Create one at <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a>.
+     A classic <code>repo</code> token also works but grants write to <i>all</i> your repos — avoid it.</p>
+  <input id="tokenInput" type="password" placeholder="github_pat_…" autocomplete="off" autocapitalize="off" spellcheck="false">
+  <button class="primary" id="saveTokenBtn" style="width:100%">Save &amp; continue</button>
+  <p id="gateErr" class="small" style="color:var(--red);min-height:18px"></p>
+</div></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+const OWNER="climbtopher", CODE="maven", STATUS="maven-status";
+const API="https://api.github.com";
+const HEALTH="https://ixj9grkgty.us-east-1.awsapprunner.com/health";
+const TKEY="maven_dashboard_token";
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>(
+  {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+function toast(msg){const t=$("toast");t.textContent=msg;t.classList.add("show");
+  clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),2600);}
+function token(){return localStorage.getItem(TKEY)||"";}
+
+async function gh(path,opts={}){
+  const r=await fetch(path.startsWith("http")?path:API+path,{
+    ...opts,
+    headers:{Authorization:"Bearer "+token(),Accept:"application/vnd.github+json",
+      "X-GitHub-Api-Version":"2022-11-28",...(opts.headers||{})}});
+  if(r.status===401){showGate("That token was rejected (401). Paste a valid token.");throw new Error("401");}
+  if(!r.ok){let d="";try{d=(await r.json()).message||"";}catch(e){}
+    throw new Error("GitHub "+r.status+(d?": "+d:""));}
+  if(r.status===204)return null;
+  const ct=r.headers.get("content-type")||"";
+  return ct.includes("json")?r.json():r.text();
+}
+// UTF-8-safe base64 decode (status log has emoji)
+function b64(s){try{return decodeURIComponent(escape(atob(s.replace(/\s/g,""))));}
+  catch(e){return atob(s.replace(/\s/g,""));}}
+function blastOf(body){const m=/blast[\s-]*radius[^A-Za-z]*\**\s*(LOW|MEDIUM|HIGH)/i.exec(body||"");
+  return m?m[1].toUpperCase():null;}
+function firstPara(body){
+  if(!body)return "";
+  const lines=body.replace(/\r/g,"").split("\n");
+  for(const ln of lines){const t=ln.trim();
+    if(!t||t.startsWith("#")||t.startsWith(">")||t.startsWith("**Status")||t.startsWith("---")||t.startsWith("|"))continue;
+    return t.replace(/\*\*/g,"").replace(/`/g,"").slice(0,280);}
+  return "";}
+function isSpecPR(pr){
+  const t=(pr.title||"")+" "+(pr.body||"");
+  if(/ready to merge|implementation|addendum/i.test(pr.title||""))return false;
+  return /gate\s*2/i.test(t)||/\bspec\b.*gate/i.test(t)||/do not implement until/i.test(pr.body||"")
+    ||/spec \(gate 2/i.test(pr.title||"");
+}
+
+/* ---------- Panel 1: Current status ---------- */
+async function loadStatus(){
+  const el=$("p1body");el.innerHTML="";
+  const rows=[];
+  // API health (App Runner). Cross-origin /health usually lacks CORS headers -> mark unknown.
+  let health='<span class="muted">checking…</span>';
+  rows.push(["API health (App Runner)","apiHealth"]);
+  rows.push(["Pipeline / last update","lastUpd"]);
+  rows.push(["Last deployment","lastDeploy"]);
+  el.innerHTML=`<div class="row"><span class="k">API health (App Runner)</span><span class="v" id="apiHealth"><span class="spin"></span></span></div>
+    <div class="row"><span class="k">Last status update</span><span class="v" id="lastUpd">—</span></div>
+    <div class="row"><span class="k">Last deployment</span><span class="v" id="lastDeploy">—</span></div>
+    <div class="row" style="display:block"><span class="k">Active blockers</span><div class="v" id="blockers" style="text-align:left;margin-top:6px">—</div></div>
+    <div class="row" style="display:block"><span class="k">Temporary exceptions</span><div class="v" id="exceptions" style="text-align:left;margin-top:6px">—</div></div>`;
+  // health
+  fetch(HEALTH,{cache:"no-store"}).then(r=>{
+    $("hdrDot").style.background=r.ok?"var(--green)":"var(--red)";
+    $("apiHealth").innerHTML=r.ok?'<span class="ok">● healthy</span>':'<span class="bad">● '+r.status+'</span>';
+  }).catch(()=>{$("apiHealth").innerHTML='<span class="muted">unknown (CORS-blocked from browser)</span>';});
+  // last status line
+  try{const md=await statusReadme();const ev=parseStatus(md);
+    if(ev[0]){$("lastUpd").innerHTML=esc(ev[0].ts.replace(" UTC",""))+
+      '<div class="small muted" style="font-weight:400;max-width:60vw">'+esc(ev[0].msg.slice(0,90))+'</div>';}
+  }catch(e){$("lastUpd").textContent="—";}
+  // blockers / exceptions / deploy — from PRIVATE maven repo MAVEN_CONTEXT.md (never hardcoded here)
+  try{
+    const f=await gh(`/repos/${OWNER}/${CODE}/contents/docs/MAVEN_CONTEXT.md`);
+    const txt=b64(f.content);
+    const dep=/(image|digest|deploy[^\n]*?)[:\-]\s*([^\n]+)/i.exec(txt);
+    $("lastDeploy").textContent= dep? dep[2].trim().slice(0,40) : "see MAVEN_CONTEXT";
+    $("blockers").innerHTML=section(txt,/blocker/i)||'<span class="muted small">none listed</span>';
+    $("exceptions").innerHTML=section(txt,/exception|temporary|counsel|rds public/i)||'<span class="muted small">none listed</span>';
+  }catch(e){
+    const note='<span class="muted small">not available until MAVEN_CONTEXT.md is on main (PR&nbsp;#41)</span>';
+    $("blockers").innerHTML=note;$("exceptions").innerHTML=note;$("lastDeploy").textContent="—";
+  }
+}
+function section(txt,re){
+  const lines=txt.replace(/\r/g,"").split("\n");let out=[],grab=false;
+  for(const ln of lines){
+    if(/^#{1,6}\s/.test(ln)){grab=re.test(ln);continue;}
+    if(grab){const t=ln.trim().replace(/^[-*]\s*/,"").replace(/\|/g," ").trim();
+      if(t)out.push(esc(t.slice(0,120)));}
+    if(out.length>=6)break;}
+  return out.length?'<div class="small">'+out.map(x=>"• "+x).join("<br>")+"</div>":"";
+}
+
+/* ---------- status feed ---------- */
+async function statusReadme(){
+  const f=await gh(`/repos/${OWNER}/${STATUS}/contents/README.md`);return b64(f.content);}
+function parseStatus(md){
+  const re=/^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d UTC)\s+[—-]\s+(.*)$/;
+  const out=[];for(const ln of md.split("\n")){const m=re.exec(ln.trim());if(m)out.push({ts:m[1],msg:m[2]});}
+  return out.reverse(); // newest first
+}
+
+/* ---------- PRs ---------- */
+async function loadPRs(){
+  let prs;
+  try{prs=await gh(`/repos/${OWNER}/${CODE}/pulls?state=open&per_page=100`);}
+  catch(e){$("p2body").innerHTML=$("p3body").innerHTML='<div class="empty bad">'+esc(e.message)+'</div>';return;}
+  const specs=prs.filter(isSpecPR), impls=prs.filter(p=>!isSpecPR(p));
+  renderSpecs(specs);renderImpls(impls);
+}
+function renderSpecs(specs){
+  const el=$("p2body");
+  if(!specs.length){el.innerHTML='<div class="empty">No open Gate-2 specs awaiting approval. 🎉</div>';return;}
+  el.innerHTML=specs.map(p=>{
+    const b=blastOf(p.body)||"GREY";
+    return `<div class="card" id="spec-${p.number}">
+      <h3>#${p.number} · ${esc(p.title)}</h3>
+      <div class="meta"><span class="badge b-${b}">${b==="GREY"?"blast: ?":b}</span>
+        <a class="small" href="${esc(p.html_url)}" target="_blank" rel="noopener">view PR ↗</a></div>
+      <p>${esc(firstPara(p.body))||'<span class="muted">no summary</span>'}</p>
+      <div class="btns">
+        <button class="primary" onclick="approveSpec(${p.number},this)">Approve</button>
+        <button class="danger" onclick="requestChanges(${p.number},this)">Request changes</button>
+      </div></div>`;}).join("");
+}
+function renderImpls(impls){
+  const el=$("p3body");
+  if(!impls.length){el.innerHTML='<div class="empty">No implementation PRs open.</div>';return;}
+  el.innerHTML=impls.map(p=>{
+    const b=blastOf(p.body)||"GREY";
+    return `<div class="card" id="impl-${p.number}">
+      <h3>#${p.number} · ${esc(p.title)}</h3>
+      <div class="meta"><span class="badge b-${b}">${b==="GREY"?"blast: ?":b}</span>
+        <span id="ci-${p.number}" class="chk pend">CI <span class="spin"></span></span>
+        <span id="sec-${p.number}" class="chk pend">sec …</span>
+        <a class="small" href="${esc(p.html_url)}" target="_blank" rel="noopener">view ↗</a></div>
+      <div class="btns">
+        <button class="primary" id="merge-${p.number}" onclick="mergePR(${p.number},'${b}',this)">Merge</button>
+      </div></div>`;}).join("");
+  impls.forEach(p=>{loadCI(p);loadSec(p);});
+}
+async function loadCI(p){
+  const want=["fast-gate","isolation-gate","memory-isolation-gate"];
+  try{
+    const d=await gh(`/repos/${OWNER}/${CODE}/commits/${p.head.sha}/check-runs?per_page=100`);
+    const by={};(d.check_runs||[]).forEach(c=>{by[c.name]=c.conclusion||c.status;});
+    const parts=want.map(n=>{const c=by[n];
+      const ok=c==="success", bad=c&&c!=="success"&&c!=="neutral"&&c!=="skipped";
+      const cls=ok?"ok":(bad?"bad":"pend");const sym=ok?"✓":(bad?"✕":"·");
+      return `<span class="${cls}">${sym}${n.replace("-gate","").replace("memory-isolation","mem-iso").replace("isolation","iso")}</span>`;}).join(" ");
+    const allGreen=want.every(n=>by[n]==="success");
+    $("ci-"+p.number).className="chk "+(allGreen?"ok":"pend");
+    $("ci-"+p.number).innerHTML=parts||"no checks";
+  }catch(e){$("ci-"+p.number).className="chk pend";$("ci-"+p.number).textContent="CI ?";}
+}
+async function loadSec(p){
+  try{
+    const files=await gh(`/repos/${OWNER}/${CODE}/pulls/${p.number}/files?per_page=100`);
+    const has=files.some(f=>/SECURITY_REVIEW/i.test(f.filename));
+    const el=$("sec-"+p.number);
+    if(has){el.className="chk ok";el.textContent="sec review ✓";}
+    else{el.className="chk pend";el.textContent="sec n/a";}
+  }catch(e){$("sec-"+p.number).textContent="sec ?";}
+}
+
+/* ---------- actions ---------- */
+async function approveSpec(n,btn){
+  if(!confirm("Post \"approved\" (Gate 2) to PR #"+n+"?"))return;
+  btn.disabled=true;btn.innerHTML='<span class="spin"></span>';
+  try{await gh(`/repos/${OWNER}/${CODE}/issues/${n}/comments`,
+    {method:"POST",body:JSON.stringify({body:"approved"})});
+    toast("Approved #"+n);const c=$("spec-"+n);if(c)c.style.opacity=.45;btn.textContent="Approved ✓";}
+  catch(e){toast(e.message);btn.disabled=false;btn.textContent="Approve";}
+}
+async function requestChanges(n,btn){
+  const msg=prompt("Comment to post on #"+n+" (Request changes):");
+  if(!msg)return;
+  btn.disabled=true;
+  try{await gh(`/repos/${OWNER}/${CODE}/issues/${n}/comments`,
+    {method:"POST",body:JSON.stringify({body:msg})});
+    toast("Comment posted on #"+n);}
+  catch(e){toast(e.message);}
+  btn.disabled=false;
+}
+async function mergePR(n,blast,btn){
+  let warn="Merge PR #"+n+" into main?";
+  if(blast==="HIGH")warn="⚠️ HIGH blast-radius. Merging #"+n+" is hard to reverse.\n\nConfirm CI is green and security review APPROVED before merging.\n\nMerge #"+n+" now?";
+  if(!confirm(warn))return;
+  btn.disabled=true;btn.innerHTML='<span class="spin"></span>';
+  try{await gh(`/repos/${OWNER}/${CODE}/pulls/${n}/merge`,
+    {method:"PUT",body:JSON.stringify({merge_method:"merge"})});
+    toast("Merged #"+n+" 🎉");const c=$("impl-"+n);if(c)c.style.opacity=.45;btn.textContent="Merged ✓";}
+  catch(e){toast("Merge failed: "+e.message);btn.disabled=false;btn.textContent="Merge";}
+}
+
+/* ---------- Panel 4 ---------- */
+async function loadActivity(){
+  const el=$("p4body");
+  try{const md=await statusReadme();const ev=parseStatus(md).slice(0,10);
+    if(!ev.length){el.innerHTML='<div class="empty">No activity yet.</div>';return;}
+    el.innerHTML='<div class="timeline">'+ev.map(e=>
+      `<div class="t"><span class="ts">${esc(e.ts.replace(" UTC",""))}</span><br>${esc(e.msg)}</div>`).join("")+"</div>";
+  }catch(e){el.innerHTML='<div class="empty bad">'+esc(e.message)+"</div>";}
+}
+
+/* ---------- boot ---------- */
+function showGate(err){$("gate").style.display="block";$("gateErr").textContent=err||"";}
+function hideGate(){$("gate").style.display="none";}
+async function refreshAll(){
+  if(!token()){showGate();return;}
+  hideGate();
+  await Promise.allSettled([loadStatus(),loadPRs(),loadActivity()]);
+}
+$("saveTokenBtn").onclick=()=>{
+  const t=$("tokenInput").value.trim();
+  if(!t){$("gateErr").textContent="Paste a token first.";return;}
+  localStorage.setItem(TKEY,t);$("tokenInput").value="";refreshAll();};
+$("tokenInput").addEventListener("keydown",e=>{if(e.key==="Enter")$("saveTokenBtn").click();});
+$("signoutBtn").onclick=()=>{if(confirm("Sign out? You'll need to paste a token again."))
+  {localStorage.removeItem(TKEY);showGate();}};
+$("refreshBtn").onclick=refreshAll;
+refreshAll();
+</script>
+</body>
+</html>

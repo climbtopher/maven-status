@@ -1,6 +1,20 @@
-# Maven Status
-*Morningside Design LLC — automated build and deployment status*
-Last updated by Claude Code.
+# Maven Status & Control Panel
+
+This repo powers the **Maven Control Panel** — a mobile dashboard for the Maven build:
+**https://climbtopher.github.io/maven-status/**
+
+The panel reads live data from the GitHub API (open PRs, CI status, the spec-approval queue) and
+lets the maintainer approve Gate-2 specs and merge ready PRs from a phone. It is a single static
+file (`index.html`, vanilla JS, no build step) served by GitHub Pages.
+
+Auth is a per-browser GitHub **fine-grained** token (stored only in your browser's localStorage,
+scoped to the `maven` + `maven-status` repos). No secrets live in this repo.
+
+The dated lines below are the raw automated status feed (appended by `~/maven-post-status.sh`);
+the panel's "Recent Activity" renders the latest of them.
+
+---
+
 2026-06-16 09:02:55 UTC — Status board live — gap-fix session in progress
 2026-06-16 09:05:54 UTC — Gap fixes complete — hash chain, status board, skills, M016 M017 added
 2026-06-16 10:22:00 UTC — Migration renamed M016→M018 audit_log hash chain
