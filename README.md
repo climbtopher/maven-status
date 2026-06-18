@@ -53,3 +53,4 @@ Last updated by Claude Code.
 2026-06-18 00:41:24 UTC — Overnight resumed — M038 completion + M039 + PR descriptions
 2026-06-18 00:55:53 UTC — M038: full suite (330) + fast-gate green; ephemeral Postgres verify PASSED (idempotent enqueue + cross-family isolation + RLS WITH CHECK denial). Starting security review.
 2026-06-18 01:03:43 UTC — M038 DONE: security-review APPROVE, MEDIUM fixed, committed+pushed to PR #30 (not merged). Gate-2 descriptions applied to PRs #28-#34. Starting M039.
+2026-06-18 01:08:59 UTC — M039: backend GET /email-accounts/status implemented + 7 endpoint tests green (incl. isolation + feed-gating); full backend suite 322 passed. iOS Parts A+B (empty states + Connect Gmail) in progress.
