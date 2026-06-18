@@ -59,3 +59,4 @@ Last updated by Claude Code.
 2026-06-18 14:48:18 UTC — codex-review demoted to advisory, M044 renumbered, PR #27 merged
 2026-06-18 14:53:49 UTC — Gate-2 specs approved+merged: M041 #33, M042 #34, M044 #40. Held: #28 (M036 addendum+sec review), #26 (CLAUDE.md rewrite+launchd)
 2026-06-18 15:09:12 UTC — M036 addendum done+security APPROVE on PR#28 (325 tests pass locally); GitHub Actions out of minutes (no runs since 14:47Z) — gates blocked until quota resolved; #26 needs rebase
+2026-06-18 15:20:15 UTC — PR #26 rebased -> clean PR #41 (merge-ready: #37 CI policy preserved, known-bugs reconciled); #26 closed. Gate 3 = Chris.
