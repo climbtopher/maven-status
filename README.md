@@ -58,3 +58,4 @@ Last updated by Claude Code.
 2026-06-18 06:32:54 UTC — DEPLOYED: M037+M038+M039 merged to main; migration current (0 applied); maven-api redeployed (/health 200) + pipeline-worker on new image with M038 scheduler live (poll=900s). NOTE: Docker Desktop engine was dead (~46h) — built via colima + standalone docker client. One family's scheduled pull logged HTTPError (graceful, likely needs Gmail reconnect).
 2026-06-18 14:48:18 UTC — codex-review demoted to advisory, M044 renumbered, PR #27 merged
 2026-06-18 14:53:49 UTC — Gate-2 specs approved+merged: M041 #33, M042 #34, M044 #40. Held: #28 (M036 addendum+sec review), #26 (CLAUDE.md rewrite+launchd)
+2026-06-18 15:09:12 UTC — M036 addendum done+security APPROVE on PR#28 (325 tests pass locally); GitHub Actions out of minutes (no runs since 14:47Z) — gates blocked until quota resolved; #26 needs rebase
