@@ -61,3 +61,4 @@ Last updated by Claude Code.
 2026-06-18 15:09:12 UTC — M036 addendum done+security APPROVE on PR#28 (325 tests pass locally); GitHub Actions out of minutes (no runs since 14:47Z) — gates blocked until quota resolved; #26 needs rebase
 2026-06-18 15:20:15 UTC — PR #26 rebased -> clean PR #41 (merge-ready: #37 CI policy preserved, known-bugs reconciled); #26 closed. Gate 3 = Chris.
 2026-06-18 15:22:23 UTC — M036 addendum + PR #26 memory system review complete. M036: addendum (Gmail revoke + iOS delete) already implemented + APPROVE-reviewed on PR #28 by a concurrent session — independently verified (suite 325 green, security seams sound). PR #26: reviewed; opened reconciled PR #42 (restores #37 codex-review-advisory + isolation gates, refreshes MAVEN_CONTEXT); dream.sh+launchd SAFE. Recommend merge #42, close #26. Nothing merged.
+2026-06-18 15:31:45 UTC — Dream run complete — 0 auto-applied, 0 proposed
