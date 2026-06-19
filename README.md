@@ -100,3 +100,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-19 14:12:28 UTC — M044 (PR #51) + M041 (PR #52) implemented, PRs open (not merged); child_ids diagnostic complete (HIGH): entity_map.child_id is NULL for 100% of rows -> _reidentify_child_token returns [] -> events.child_ids='{}'; the M021 token->child_id bridge was never populated. New events stay empty until fixed (fix=populate child_id at child-seed + backfill; HIGH/de-id). Premise notes: real family is f9bea1be-…, not 7fa5a420; ~14 events fleet-wide, not 43.
 2026-06-19 15:33:35 UTC — M044+M041 merged, M051 child_ids spec open
 2026-06-19 18:50:09 UTC — M051 implementing: PR #54 open, backfill run, deploy in progress
+2026-06-19 19:04:26 UTC — M051 implemented, M041+M051 deployed, backfill done, fresh ingest triggered
