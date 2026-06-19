@@ -94,3 +94,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-19 07:00:06 UTC — Dream run complete — 4 auto-applied, 0 proposed
 2026-06-19 12:24:00 UTC — M036 migration applied to prod via ECS one-off (delete_family() now exists, granted to the API DB role) — account deletion unblocked. M050 spec (enrich commit_event approval payload, COPPA token-only) drafted, awaiting Gate-2.
 2026-06-19 13:16:31 UTC — M050 merged, deployed, backfilled — approval cards now show event details
+2026-06-19 13:42:23 UTC — Maven Dev MCP server built + locally verified (real MCP/Streamable-HTTP, bearer-gated, 13 tools, merge excluded). NOT yet live — needs interactive keychain token + ngrok account; claude.ai web needs OAuth follow-up.
