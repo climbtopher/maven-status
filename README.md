@@ -134,3 +134,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 12:07:55 UTC — M060 complete — top scanning banner, 3s /events poll, 5min timeout
 2026-06-21 12:11:54 UTC — M071 complete — session revocation; security review APPROVE
 2026-06-21 12:15:30 UTC — M064 complete — Twilio SMS in/outbound; security review APPROVE (deploy gated on Twilio approval)
+2026-06-21 12:35:56 UTC — M059 complete — skippable post-hatch app tour with tab navigation
