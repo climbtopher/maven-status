@@ -142,3 +142,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 13:08:28 UTC — M066 security review BLOCK
 2026-06-21 13:16:11 UTC — M066 BLOCKING-1 SSRF rebinding remediated — IP-pinned fetch, pending re-review
 2026-06-21 13:22:15 UTC — M066 re-review APPROVE — SSRF rebinding fix verified
+2026-06-21 13:32:27 UTC — M067 complete — Google Calendar write via separate OAuth; security review APPROVE (deploy gated on Google verification + ZDR)
