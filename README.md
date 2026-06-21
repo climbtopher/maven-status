@@ -161,3 +161,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 21:01:33 UTC — Spec-writer updating M077 to Option B+ — adding co_manager members read path
 2026-06-21 21:01:48 UTC — Spec-writer updating M077 to Option B+ — adding co_manager members read path
 2026-06-21 21:07:23 UTC — M077 updated to Option B+ (caregivers + pending invites + accepted co_manager members). Implementation PAUSED — spec is still Gate-2 'drafted (awaiting approval)'; need Chris's explicit 'approved' on the finalized Option B+ before impl.
+2026-06-21 22:50:02 UTC — impl/m077 running — caregivers Option B+ implementation
