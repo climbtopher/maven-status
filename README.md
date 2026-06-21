@@ -136,3 +136,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 12:15:30 UTC — M064 complete — Twilio SMS in/outbound; security review APPROVE (deploy gated on Twilio approval)
 2026-06-21 12:35:56 UTC — M059 complete — skippable post-hatch app tour with tab navigation
 2026-06-21 12:37:14 UTC — M066 start — caregiver calendar sources (Gate-3, MEDIUM): read CLAUDE.md/spec/dedupe/gmail/app/hatching/pull/pipeline/iOS. Implementing migration + endpoints + iCal fetcher (SSRF guard) + primary-only auth + iOS UI.
+2026-06-21 12:37:24 UTC — M065 complete — image/SMS chat ingest; security review APPROVE-with-notes (deploy gated on ZDR)
