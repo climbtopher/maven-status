@@ -146,3 +146,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 13:33:10 UTC — Batch 2 COMPLETE — all 14 specs (M058-M071) have PRs; 13 clean + M066 SSRF fixed & re-approved
 2026-06-21 14:15:18 UTC — M065 OCR-seam fix reviewed — APPROVE-WITH-NON-BLOCKING-NOTES (deploy gated on Google ZDR)
 [2026-06-21T14:50:01Z] deploy failure: maven:8868a51 (App Runner maven-api) — run 27907928003
+[2026-06-21T14:54:58Z] deploy failure: maven:62ecf6f (App Runner maven-api) — run 27908035526
