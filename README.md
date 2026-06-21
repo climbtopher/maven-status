@@ -150,3 +150,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-21T15:19:29Z] deploy failure: maven:4893672 (App Runner maven-api) — run 27908656613
 [2026-06-21T16:53:06Z] deploy success: maven:222c2db (App Runner maven-api) — run 27910998142
 2026-06-21 17:47:56 UTC — Opened PR #85 to fix stale M068 test (FK-aware NOTICE ordering) — unblocks main green; then PR #84 can merge
+2026-06-21 18:27:12 UTC — Merged PR #85 (M068 test fix) — main is GREEN again. PR #84 (agent rewrite) NOT merged: its fast-gate is stale-red (branch predates #85's fix); needs a branch update (merge main in) to re-run CI before it can merge.
