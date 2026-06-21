@@ -138,3 +138,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 12:37:14 UTC — M066 start — caregiver calendar sources (Gate-3, MEDIUM): read CLAUDE.md/spec/dedupe/gmail/app/hatching/pull/pipeline/iOS. Implementing migration + endpoints + iCal fetcher (SSRF guard) + primary-only auth + iOS UI.
 2026-06-21 12:37:24 UTC — M065 complete — image/SMS chat ingest; security review APPROVE-with-notes (deploy gated on ZDR)
 2026-06-21 12:54:34 UTC — M066 backend done: migration (verified up/down/up on ephemeral PG16 + RLS isolation), iCal fetcher+SSRF guard, calendar sync (type filtering), primary-only endpoints, blueprint wired, worker scheduler. 96 new tests + full suite (679) green. Starting iOS + docs.
+2026-06-21 13:01:45 UTC — M066 complete — caregiver Gmail + iCal calendar sources with SSRF guard + primary-only auth
