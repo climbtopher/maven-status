@@ -118,3 +118,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-20 15:32:40 UTC — M054 M055 M056 merged — RC-1 RC-2 RC-3 resolved
 2026-06-20 17:34:44 UTC — M057 PR opened — GitHub Actions deploy pipeline ready for review
 2026-06-21 07:00:05 UTC — Dream run complete — 0 auto-applied, 0 proposed
+2026-06-21 10:53:15 UTC — M063 complete — dream.sh always emits a dated Last-session digest
