@@ -127,3 +127,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 11:52:28 UTC — M058 complete — warm hatch copy + name/phone capture + phone_number migration
 2026-06-21 11:52:51 UTC — M071 session-revocation impl started — read M071/M055 specs + auth/migration/worker/iOS context; no jti exists today (confirmed). Implementing on m071-impl.
 2026-06-21 11:53:19 UTC — M058 complete — warm hatch copy + name/phone capture + phone_number migration
+2026-06-21 11:55:55 UTC — M064 Twilio SMS impl starting (worktree m064-impl): read CLAUDE.md/spec/app.py/channels/pipeline/db/conftest. Building api/sms.py inbound webhook + TwilioChannel.send + channel seam + app-level MessageSid dedupe. HIGH, stops before PR for security review.
