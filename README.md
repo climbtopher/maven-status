@@ -139,3 +139,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 12:37:24 UTC — M065 complete — image/SMS chat ingest; security review APPROVE-with-notes (deploy gated on ZDR)
 2026-06-21 12:54:34 UTC — M066 backend done: migration (verified up/down/up on ephemeral PG16 + RLS isolation), iCal fetcher+SSRF guard, calendar sync (type filtering), primary-only endpoints, blueprint wired, worker scheduler. 96 new tests + full suite (679) green. Starting iOS + docs.
 2026-06-21 13:01:45 UTC — M066 complete — caregiver Gmail + iCal calendar sources with SSRF guard + primary-only auth
+2026-06-21 13:08:28 UTC — M066 security review BLOCK
