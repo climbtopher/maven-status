@@ -125,3 +125,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 11:28:31 UTC — M062 complete — TabStateView empty/error adopted on all screens incl. Watch
 2026-06-21 11:51:47 UTC — M061 start — implementing changes 1+2 (visible PII-free backfill error logging + non-blocking daemon dispatch). Change 3 (seed-order-independent auto-seed) STOPPED: spec leaves the auto-seed-on-backfill policy UNRESOLVED and gates it on Chris (crosses M041 propose-don't-persist). Flagging, not crossing it silently.
 2026-06-21 11:52:28 UTC — M058 complete — warm hatch copy + name/phone capture + phone_number migration
+2026-06-21 11:52:51 UTC — M071 session-revocation impl started — read M071/M055 specs + auth/migration/worker/iOS context; no jti exists today (confirmed). Implementing on m071-impl.
