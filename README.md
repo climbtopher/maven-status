@@ -158,3 +158,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 20:11:32 UTC — Diagnostic complete — docs/DIAGNOSTIC_REPORT_bugs_june21.md: 6 bugs. HIGH: #6 caregiver table-mismatch, #4 merged calendar row. MED-HIGH: #2 hatch no NavigationStack, #3 Gmail token-refresh HTTPError (masked status), #5 calendar scopes/redirect access_blocked. MED: #1 hatch undercount (needs DB evidence).
 2026-06-21 20:53:22 UTC — Spec-writer running — Bug 6 caregivers pending invites spec
 2026-06-21 20:56:44 UTC — Spec-writer done — specs/M077_caregivers_show_pending_invites.md drafted (Bug 6, Option B: caregivers + pending invites with badge). Gate-2, awaiting Chris approval.
+2026-06-21 21:01:33 UTC — Spec-writer updating M077 to Option B+ — adding co_manager members read path
