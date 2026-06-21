@@ -154,3 +154,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-21T18:31:19Z] deploy success: maven:acc0095 (App Runner maven-api) — run 27913472895
 2026-06-21 19:18:33 UTC — Merged PR #84 — agents Maven-correct, main green
 [2026-06-21T19:23:22Z] deploy success: maven:4d82e06 (App Runner maven-api) — run 27914791314
+2026-06-21 20:04:19 UTC — Diagnostic agent running — investigating 6 bugs from June 21 iOS testing
