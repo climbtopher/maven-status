@@ -124,3 +124,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 11:27:12 UTC — M062 implemented — TabState relocated to Shared/, all listed screens + Watch migrated off raw error(String); iOS+Watch BUILD SUCCEEDED; EmptyState 34/34 + Watch 11/11 green. Committing + opening PR.
 2026-06-21 11:28:31 UTC — M062 complete — TabStateView empty/error adopted on all screens incl. Watch
 2026-06-21 11:51:47 UTC — M061 start — implementing changes 1+2 (visible PII-free backfill error logging + non-blocking daemon dispatch). Change 3 (seed-order-independent auto-seed) STOPPED: spec leaves the auto-seed-on-backfill policy UNRESOLVED and gates it on Chris (crosses M041 propose-don't-persist). Flagging, not crossing it silently.
+2026-06-21 11:52:28 UTC — M058 complete — warm hatch copy + name/phone capture + phone_number migration
