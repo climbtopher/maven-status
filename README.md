@@ -156,3 +156,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-21T19:23:22Z] deploy success: maven:4d82e06 (App Runner maven-api) — run 27914791314
 2026-06-21 20:04:19 UTC — Diagnostic agent running — investigating 6 bugs from June 21 iOS testing
 2026-06-21 20:11:32 UTC — Diagnostic complete — docs/DIAGNOSTIC_REPORT_bugs_june21.md: 6 bugs. HIGH: #6 caregiver table-mismatch, #4 merged calendar row. MED-HIGH: #2 hatch no NavigationStack, #3 Gmail token-refresh HTTPError (masked status), #5 calendar scopes/redirect access_blocked. MED: #1 hatch undercount (needs DB evidence).
+2026-06-21 20:53:22 UTC — Spec-writer running — Bug 6 caregivers pending invites spec
