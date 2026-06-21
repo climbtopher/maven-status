@@ -160,3 +160,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 20:56:44 UTC — Spec-writer done — specs/M077_caregivers_show_pending_invites.md drafted (Bug 6, Option B: caregivers + pending invites with badge). Gate-2, awaiting Chris approval.
 2026-06-21 21:01:33 UTC — Spec-writer updating M077 to Option B+ — adding co_manager members read path
 2026-06-21 21:01:48 UTC — Spec-writer updating M077 to Option B+ — adding co_manager members read path
+2026-06-21 21:07:23 UTC — M077 updated to Option B+ (caregivers + pending invites + accepted co_manager members). Implementation PAUSED — spec is still Gate-2 'drafted (awaiting approval)'; need Chris's explicit 'approved' on the finalized Option B+ before impl.
