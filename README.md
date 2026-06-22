@@ -185,3 +185,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-22 22:36:37 UTC — Bug 7 diagnostic updated — HIGH confidence, Gate 1 passes
 2026-06-22 22:37:36 UTC — Spec-writer running — M082 account deletion fix
 2026-06-22 22:40:44 UTC — M082 account-deletion-fix spec drafted (Gate 2, awaiting Chris approval) — Option C (CASCADE on 5 missing FKs + explicit teardown), iOS error surface, pg_constraint coverage guard. HIGH blast radius, security-review required. specs/M082_account_deletion_fix.md
+2026-06-22 23:12:01 UTC — M082 spec updated — post-merge ops runbook added
