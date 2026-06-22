@@ -180,3 +180,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-22T20:25:17Z] deploy success: maven:f32d767 (App Runner maven-api) — run 27981386670
 2026-06-22 20:36:35 UTC — Diagnostic agent running — Bug 7 account deletion skips hatch
 2026-06-22 20:42:27 UTC — Bug 7 diagnostic complete — hypothesis DISPROVEN (no iOS onboarding flag); most-likely RC: account not actually torn down (silent DELETE /families/me failure). Confidence MEDIUM — Gate 1 not yet passed; named prod DB + log evidence required. Report appended.
+2026-06-22 21:55:53 UTC — Bug 7 prod evidence gathering — read-only
