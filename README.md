@@ -172,3 +172,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-22 07:00:03 UTC — Dream run complete — 1 auto-applied, 0 proposed
 2026-06-22 09:37:29 UTC — M078 (#88) M079 (#89) M080 (#90) PRs open + green (fast/isolation/memory gates pass) + M081 spec written — awaiting Gate-2 (M081) and Gate-3 merges (M078/79/80)
 [2026-06-22T17:46:01Z] deploy success: maven:b6d1d87 (App Runner maven-api) — run 27972163165
+[2026-06-22T17:51:25Z] deploy success: maven:9d59f0a (App Runner maven-api) — run 27972273581
