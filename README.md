@@ -176,3 +176,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-22 17:52:42 UTC — Merged M078 M079 M080 + specs committed (#91) + M081 PR #92 open — awaiting Gate-3
 2026-06-22 19:59:44 UTC — Merged PR #92 M081 hatch multi-kid input fix — all 5 bugs shipped, main green
 [2026-06-22T20:07:34Z] deploy success: maven:49e33a0 (App Runner maven-api) — run 27980172888
+2026-06-22 20:20:26 UTC — Committed dream job docs MAVEN_CONTEXT + INBOX — main clean
