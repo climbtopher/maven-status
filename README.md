@@ -165,3 +165,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-21 22:58:25 UTC — impl/m077 done — PR opened (caregivers Option B+: caregivers + co_manager members + pending invites; token_hash/apple_sub never returned; isolation tests pass). Flagged a pre-existing unrelated m067 guard-test failure on main.
 2026-06-22 00:28:34 UTC — Merged PR #86 — M077 caregivers Option B+ live
 2026-06-22 00:30:25 UTC — Opened PR to remove stale M067 guard test
+2026-06-22 00:31:49 UTC — Merged stale M067 guard test removal — main clean
