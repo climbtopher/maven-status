@@ -234,3 +234,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 23:22:20 UTC — Merged M094(#109)+M095(#108)+M092(#107)+specs(#110); IAM applied live (UpdateService/DescribeServices allowed); deploy b9bd58f queued — watching worker redeploy
 [2026-06-23T23:23:05Z] deploy success: maven:8119526 (App Runner maven-api) — run 28063649191
 [2026-06-23T23:28:35Z] deploy failure: maven:b9bd58f (App Runner maven-api) — run 28063750151
+2026-06-23 23:30:34 UTC — Deploy b9bd58f RED: worker register step hit AccessDenied on ecs:DescribeTaskDefinition (not granted). API on new image; worker still stale. Fail-fast worked (no silent green). Needs ecs:DescribeTaskDefinition grant + re-deploy — awaiting Chris.
