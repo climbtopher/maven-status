@@ -196,3 +196,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 07:00:05 UTC — Dream run complete — 0 auto-applied, 0 proposed
 2026-06-23 17:16:07 UTC — Wired CALENDAR_OAUTH_REDIRECT_URI into App Runner — Bug 5 fix
 2026-06-23 17:19:07 UTC — CALENDAR_OAUTH_REDIRECT_URI wired into App Runner — service RUNNING, /health 200. 7 secrets (6 original + new), all 6 plain env vars preserved (DEIDENTIFY_MANDATORY intact). Corrected the literal command to preserve image + plain env (would have wiped COPPA flag). Bug 5 Cause B closed; Cause A (Google console scopes/verification) still pending. Direct prod mutation — fold into provision script for durability.
+2026-06-23 17:24:46 UTC — Diagnostic agent running — bugs 8 9 10 11 12 13 16
