@@ -226,3 +226,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 22:05:59 UTC — M089 VERIFIED WORKING under real load: circuit breaker OPEN + backoff active → 0 actual Gemini calls / 0 real 429s in last 4m (170 breaker short-circuits, 85 backoff re-queues). The quota-burning storm (was 4,913 real 429s/45m) is GONE — replaced by cheap in-process breaker-open + jittered backoff. M093 applied (worker task-def :6, invalid_client gone). CAVEAT: breaker OPEN = extraction PAUSED during cooldown; the real remaining limit is the Gemini quota itself (M089-out-of-scope) — full ingestion needs a quota bump or waits for quota recovery. PR #106 open.
 2026-06-23 22:09:41 UTC — impl/m092 running — worker deploy pipeline fix
 2026-06-23 22:32:10 UTC — Spec-writer running — M094 deploy IAM worker permissions
+2026-06-23 22:38:59 UTC — Spec-writer running — M095 Gmail backfill horizon limit
