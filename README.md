@@ -216,3 +216,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-23T20:23:15Z] deploy success: maven:39cdbbb (App Runner maven-api) — run 28054282923
 [2026-06-23T20:28:12Z] deploy success: maven:2684956 (App Runner maven-api) — run 28054327635
 2026-06-23 20:28:44 UTC — Merged M089 M090 M091 — Gemini backoff live, iOS fixes shipped, deploy green
+2026-06-23 21:05:45 UTC — HALTED worker redeploy — :latest tag points to a JUNE-19 image (deploy pipeline pushes :<sha> but never moves :latest). force-new-deployment would pull the OLD image (no M089) — a downgrade, not an activation. M089 image exists as maven:2684956. Need to pin the SHA in the worker task-def (or re-tag latest). 429 storm still active (648/3min). Awaiting Chris's choice on activation approach. No prod change made.
