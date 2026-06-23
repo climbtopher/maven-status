@@ -211,3 +211,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 19:18:10 UTC — Diagnostic bugs 4/9/17 (deeper): stale-build DISPROVEN. Bug 4 = shared @Published 'working' flag disables BOTH calendar buttons (M079 left it). Bug 9 = M085 used .ignoresSafeArea(edges:) which can't SHRINK the dim above the iOS-18 tab bar (wrong mechanism). Bug 17 (HIGH impact, server-side) = Gemini Flash extraction 429-storm (4,913 429s/45m, no backoff retry loop) → 0 events → banner spins; Gmail itself connected+tokened, NOT an OAuth issue. Appended to report.
 2026-06-23 19:27:11 UTC — Specs M089 M090 M091 — orchestrator running
 2026-06-23 19:30:33 UTC — Specs M089 M090 M091 written — awaiting Gate-2 approval
+2026-06-23 19:47:12 UTC — M090 implemented — PR #103: calendar per-button in-flight flag (connectingGrantKind), 8 ios unit tests pass, TEST BUILD SUCCEEDED on /tmp/dd-m090. iOS-only, trusted-sender path unchanged. Awaiting CI + Chris merge (Gate 3).
