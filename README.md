@@ -206,3 +206,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-23T18:31:38Z] deploy success: maven:4bbfad3 (App Runner maven-api) — run 28047822996
 [2026-06-23T18:36:39Z] deploy success: maven:b522587 (App Runner maven-api) — run 28047955389
 2026-06-23 18:53:45 UTC — Diagnostic agent running — bugs 4 9 13 post-rebuild verification
+2026-06-23 18:58:27 UTC — Diagnostic: bugs 4/9/13 post-rebuild — Bug 4 & Bug 9 fixes CORRECT on main (→ stale iOS build / not rebuilt; Bug 4 may also be Bug-5 OAuth conflation). Bug 13 is a GENUINE remaining defect: edit is a leading SWIPE (not tap) AND co-parents gated out (isCaregiver==false) — needs a product decision (tap affordance + whether co-parents editable). Appended to DIAGNOSTIC_REPORT_bugs_june21.md.
