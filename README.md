@@ -191,3 +191,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 03:20:51 UTC — M082 PR #94 open (https://github.com/climbtopher/maven/pull/94) — security-review APPROVE; CI running (fast-gate + isolation-gate + memory-isolation-gate required, codex advisory). Watching CI. NOT merging — Gate 3 is Chris's.
 2026-06-23 03:22:15 UTC — M082 PR #94 — ALL CI GREEN (fast-gate, isolation-gate, memory-isolation-gate pass; codex advisory pass). isolation-gate applied the migration on real Postgres and ran the live deletion/isolation/coverage tests — fix verified end-to-end. Security-review APPROVE. Ready for Chris's Gate-3 merge. NOT merged.
 2026-06-23 03:25:11 UTC — Merged PR #94 M082 account deletion fix — deploy running
+[2026-06-23T03:29:49Z] deploy success: maven:7691a1a (App Runner maven-api) — run 27999983922
