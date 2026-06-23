@@ -237,3 +237,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 23:30:34 UTC — Deploy b9bd58f RED: worker register step hit AccessDenied on ecs:DescribeTaskDefinition (not granted). API on new image; worker still stale. Fail-fast worked (no silent green). Needs ecs:DescribeTaskDefinition grant + re-deploy — awaiting Chris.
 2026-06-23 23:37:49 UTC — ecs:DescribeTaskDefinition added to deploy role (EcsMigrate, Resource * — applied live + pushed to main 6dbe6a3); deploy run 28064489315 in progress, watching worker redeploy
 [2026-06-23T23:44:21Z] deploy success: maven:6dbe6a3 (App Runner maven-api) — run 28064489315
+2026-06-23 23:45:15 UTC — DEPLOY GREEN (6dbe6a3): worker redeployed via pipeline for the first time — maven-pipeline-worker now on task-def :7 image maven:6dbe6a3, services-stable COMPLETED (running=desired=1). M092+M094+M095 fully live; M095 backfill horizon now active in the worker.
