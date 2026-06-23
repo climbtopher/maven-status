@@ -235,3 +235,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-23T23:23:05Z] deploy success: maven:8119526 (App Runner maven-api) — run 28063649191
 [2026-06-23T23:28:35Z] deploy failure: maven:b9bd58f (App Runner maven-api) — run 28063750151
 2026-06-23 23:30:34 UTC — Deploy b9bd58f RED: worker register step hit AccessDenied on ecs:DescribeTaskDefinition (not granted). API on new image; worker still stale. Fail-fast worked (no silent green). Needs ecs:DescribeTaskDefinition grant + re-deploy — awaiting Chris.
+2026-06-23 23:37:49 UTC — ecs:DescribeTaskDefinition added to deploy role (EcsMigrate, Resource * — applied live + pushed to main 6dbe6a3); deploy run 28064489315 in progress, watching worker redeploy
