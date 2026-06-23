@@ -199,3 +199,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 17:24:46 UTC — Diagnostic agent running — bugs 8 9 10 11 12 13 16
 2026-06-23 17:30:20 UTC — Diagnostic complete — bugs 8,9,10,11,12,13,16 appended to DIAGNOSTIC_REPORT_bugs_june21.md. Bug 11: NO Tailscale dependency (stale label only, HIGH). Bugs 10≡12 share one dead Disconnect button. Bug 13 needs a new RLS endpoint (caregiver edit). Bug 8 MEDIUM (needs request trace); rest HIGH. All LOW/MEDIUM blast.
 2026-06-23 17:40:10 UTC — Specs M083-M087 written + Bug 8 diagnosed — awaiting Gate-2 approval
+2026-06-23 17:42:20 UTC — Spec-writer running — M088 hatch confirm ordering fix
