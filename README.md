@@ -192,3 +192,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 03:22:15 UTC — M082 PR #94 — ALL CI GREEN (fast-gate, isolation-gate, memory-isolation-gate pass; codex advisory pass). isolation-gate applied the migration on real Postgres and ran the live deletion/isolation/coverage tests — fix verified end-to-end. Security-review APPROVE. Ready for Chris's Gate-3 merge. NOT merged.
 2026-06-23 03:25:11 UTC — Merged PR #94 M082 account deletion fix — deploy running
 [2026-06-23T03:29:49Z] deploy success: maven:7691a1a (App Runner maven-api) — run 27999983922
+2026-06-23 03:30:36 UTC — M082 DEPLOYED to prod ✅ — migration ran (Fargate one-off, exit 0 gate passed), App Runner promoted + stabilized (RUNNING) + health-checked. main @ 7691a1a. Account deletion FK fix is live. Next (Chris, manual): post-merge ops runbook to clean up the 2 orphaned families — NOT run by automation.
