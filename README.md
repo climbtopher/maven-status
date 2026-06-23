@@ -215,3 +215,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 19:52:10 UTC — M089 M090 M091 PRs open (#104 M089, #103 M090, #102 M091) — awaiting Gate-3. CI: #102/#103 green, #104 pending (just opened; pytest 840 passed locally). No migrations, no auth/gateway touched.
 [2026-06-23T20:23:15Z] deploy success: maven:39cdbbb (App Runner maven-api) — run 28054282923
 [2026-06-23T20:28:12Z] deploy success: maven:2684956 (App Runner maven-api) — run 28054327635
+2026-06-23 20:28:44 UTC — Merged M089 M090 M091 — Gemini backoff live, iOS fixes shipped, deploy green
