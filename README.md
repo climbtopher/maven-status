@@ -213,3 +213,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 19:30:33 UTC — Specs M089 M090 M091 written — awaiting Gate-2 approval
 2026-06-23 19:47:12 UTC — M090 implemented — PR #103: calendar per-button in-flight flag (connectingGrantKind), 8 ios unit tests pass, TEST BUILD SUCCEEDED on /tmp/dd-m090. iOS-only, trusted-sender path unchanged. Awaiting CI + Chris merge (Gate 3).
 2026-06-23 19:52:10 UTC — M089 M090 M091 PRs open (#104 M089, #103 M090, #102 M091) — awaiting Gate-3. CI: #102/#103 green, #104 pending (just opened; pytest 840 passed locally). No migrations, no auth/gateway touched.
+[2026-06-23T20:23:15Z] deploy success: maven:39cdbbb (App Runner maven-api) — run 28054282923
