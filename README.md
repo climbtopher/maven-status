@@ -239,3 +239,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-23T23:44:21Z] deploy success: maven:6dbe6a3 (App Runner maven-api) — run 28064489315
 2026-06-23 23:45:15 UTC — DEPLOY GREEN (6dbe6a3): worker redeployed via pipeline for the first time — maven-pipeline-worker now on task-def :7 image maven:6dbe6a3, services-stable COMPLETED (running=desired=1). M092+M094+M095 fully live; M095 backfill horizon now active in the worker.
 2026-06-23 23:49:14 UTC — Session complete — M089-M095 shipped, worker pipeline fixed, backfill horizon active, main green (20205eb). #106 (M093 provisioning script) merged; deploy 28064974361 in progress.
+[2026-06-23T23:55:35Z] deploy success: maven:20205eb (App Runner maven-api) — run 28064974361
