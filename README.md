@@ -204,3 +204,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 18:18:48 UTC — M083-M088 all 6 PRs open (#95 M083, #96 M085, #97 M086, #98 M084, #99 M087, #100 M088). CI: 5 green, #100 fast/memory-iso pending. M087 (HIGH) security-review APPROVE committed to #99. No migrations. Awaiting Gate-3 review/merge — Chris. NOTE: #95/#98/#99 all touch SettingsView.swift → sequential rebase at merge.
 2026-06-23 18:30:35 UTC — Merged M083-M088 + specs committed — main green, iOS rebuild needed
 [2026-06-23T18:31:38Z] deploy success: maven:4bbfad3 (App Runner maven-api) — run 28047822996
+[2026-06-23T18:36:39Z] deploy success: maven:b522587 (App Runner maven-api) — run 28047955389
