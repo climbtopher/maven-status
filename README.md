@@ -227,3 +227,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 22:09:41 UTC — impl/m092 running — worker deploy pipeline fix
 2026-06-23 22:32:10 UTC — Spec-writer running — M094 deploy IAM worker permissions
 2026-06-23 22:38:59 UTC — Spec-writer running — M095 Gmail backfill horizon limit
+2026-06-23 22:46:35 UTC — M094 IMPLEMENT: live ARN check reveals spec/IaC divergence — worker task-def roles 'maven-ecs-execution-role' & 'maven-worker-task-role' DO NOT EXIST in account; live worker task-def uses maven-ecs-task-execution (already granted) + null taskRole. Flagging in PR + security review (NEEDS CHANGES likely).
