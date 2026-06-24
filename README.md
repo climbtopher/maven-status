@@ -299,3 +299,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 19:10:40 UTC — Dev MCP plist + IP fix — PR #122 open (valid LaunchDaemon, env-var bind to 100.70.190.35:8765, security-review APPROVE), awaiting Gate-3 merge
 2026-06-24 19:11:44 UTC — GREEN: M098a #120 + M098b #121 — all required gates pass (fast-gate, isolation-gate [live PG], memory-isolation-gate) + codex-review advisory pass, on BOTH PRs. isolation-gate confirms delete_family has zero uncovered tables + cross-tenant denial. Both OPEN, NOT merged. Awaiting Gate 3 (Chris) + decision on independent review (review docs are orchestrator-authored due to broken subagent sandbox this session).
 2026-06-24 19:28:40 UTC — Subagent sandbox diagnostic — environment comparison + trust assessment
+2026-06-24 19:33:43 UTC — PR #122 merged (6650e43) — dev MCP plist+IP fix live on main; plutil OK, placeholder clean, binds 100.70.190.35:8765
