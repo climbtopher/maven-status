@@ -254,3 +254,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 11:42:46 UTC — Read-only investigation — hatch + extraction pipeline audit (4 parallel readers: hatch flow, data model, extraction, entity map)
 2026-06-24 11:44:52 UTC — Hatch + extraction audit complete (4 readers synthesized) — report delivered: hatch fields, data model, extraction prompt, Gemini context, and key gaps for the family knowledge map
 2026-06-24 12:10:02 UTC — Spec-writer running — M097 family knowledge map data model
+2026-06-24 12:14:27 UTC — M097 spec updated — composite FK added to program_contacts (structural cross-family guarantee)
