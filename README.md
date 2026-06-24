@@ -300,3 +300,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 19:11:44 UTC — GREEN: M098a #120 + M098b #121 — all required gates pass (fast-gate, isolation-gate [live PG], memory-isolation-gate) + codex-review advisory pass, on BOTH PRs. isolation-gate confirms delete_family has zero uncovered tables + cross-tenant denial. Both OPEN, NOT merged. Awaiting Gate 3 (Chris) + decision on independent review (review docs are orchestrator-authored due to broken subagent sandbox this session).
 2026-06-24 19:28:40 UTC — Subagent sandbox diagnostic — environment comparison + trust assessment
 2026-06-24 19:33:43 UTC — PR #122 merged (6650e43) — dev MCP plist+IP fix live on main; plutil OK, placeholder clean, binds 100.70.190.35:8765
+2026-06-24 19:35:38 UTC — Dev MCP pre-flight pass 2 — GO: IP 100.70.190.35 matches, plist lints OK, 100.70.190.35:8765 free, mcp 1.28.0, dry-run binds real IP, no stray proc — ready for sudo load
