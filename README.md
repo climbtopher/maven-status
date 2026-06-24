@@ -247,3 +247,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-24T01:23:25Z] deploy success: maven:5b7fc60 (App Runner maven-api) — run 28068425158
 2026-06-24 01:24:29 UTC — Merged M096 Gmail cursor-based polling (main 5b7fc60); deploy GREEN, worker on task-def :9 image (new). Stale queue cleanup pending Chris authorization: 2943 old (>30d) queued to delete, 1333 recent kept. NOTE: worker desiredCount=0 (not running).
 2026-06-24 01:27:42 UTC — Stale queue cleaned (2943 old jobs removed; 1333 recent kept) — worker scaled back to 1/1 with M096 cursor fix; verifying cursor-based polling
+2026-06-24 01:31:50 UTC — M096 VERIFIED LIVE: cursor polling active (pull window=cursor-since, enqueued=1 — no flood); 0 old(>30d) jobs re-enqueued after cleanup; worker 1/1 healthy, breaker closed, queue draining 1333->1293, done 160->200. Bug 17 chain fully resolved.
