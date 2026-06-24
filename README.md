@@ -249,3 +249,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 01:27:42 UTC — Stale queue cleaned (2943 old jobs removed; 1333 recent kept) — worker scaled back to 1/1 with M096 cursor fix; verifying cursor-based polling
 2026-06-24 01:31:50 UTC — M096 VERIFIED LIVE: cursor polling active (pull window=cursor-since, enqueued=1 — no flood); 0 old(>30d) jobs re-enqueued after cleanup; worker 1/1 healthy, breaker closed, queue draining 1333->1293, done 160->200. Bug 17 chain fully resolved.
 2026-06-24 01:34:24 UTC — Session complete — Bug 17 fully closed, M096 live, main green
+2026-06-24 01:47:49 UTC — Old-mail approval cards cleared (18 rejected) — Approvals queue clean (0 pending for the test family)
