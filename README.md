@@ -292,3 +292,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 18:46:32 UTC — D-track stale test already fixed + merged by concurrent session (PR #119); validated main green at b417cee — #116/#117/#118 unblocked
 2026-06-24 18:47:04 UTC — PR #119 merged — main green, Maven PRs unblocked
 [2026-06-24T18:52:08Z] deploy success: maven:b417cee (App Runner maven-api) — run 28121615850
+2026-06-24 18:57:29 UTC — Dev MCP server pre-flight: NO-GO — plist malformed (only ProgramArguments array, plutil -lint fails) + 100.x.y.z placeholder in plist & client URL (real TS IP 100.70.190.35); server code boots clean, mcp 1.28.0, bind 100.70.190.35:8765 free
