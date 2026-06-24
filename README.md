@@ -268,3 +268,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 14:10:25 UTC — Dev MCP server spec renamed to M000 — M098 free for hatch redesign
 2026-06-24 14:11:59 UTC — M097 tenant isolation check added to PR #113 — ready for Gate-3
 2026-06-24 14:47:56 UTC — D001 dev-MCP-server-core spec drafted (Gate 2). Streamable-HTTP read-only server, 8 tools (read_file/list_files/search_files/get_pr_status/get_open_prs/get_worktree_status/get_spec_status/get_migration_status). Repo-root path-confinement + secret denylist (fail-closed) + read-only + no DB/AWS = the load-bearing guards. MCP SDK in requirements-dev.txt (not prod). MEDIUM blast, security-review REQUIRED. Supersedes M000. Deployment=D002. Proceeding to D002 research.
+2026-06-24 14:48:27 UTC — M097 merged — Gate 3 complete
