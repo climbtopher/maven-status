@@ -284,3 +284,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 17:34:04 UTC — M100 + M101a changes applied — all three Tier-1 specs Gate-2 approved
 2026-06-24 17:45:35 UTC — D001 + D002 merged — dev MCP server live on main
 [2026-06-24T17:51:30Z] deploy success: maven:97c597c (App Runner maven-api) — run 28118060618
+[2026-06-24T17:58:51Z] deploy success: maven:38a7bcd (App Runner maven-api) — run 28118137997
