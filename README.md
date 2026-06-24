@@ -259,3 +259,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 12:33:14 UTC — Architecture audit complete — reasoner chokepoint, locked decisions, build plan, memory/dreaming/privacy/extraction synthesized into full report
 2026-06-24 12:42:08 UTC — M097 rewritten — corrected two-model architecture (Gemini=extract, ClaudeReasoner=reason; map feeds reasoner; M101a/M101b split). DDL/tests/criteria/contract preserved.
 2026-06-24 13:32:28 UTC — M097 spec finalized — three changes applied, awaiting implementation
+2026-06-24 13:39:08 UTC — MCP track — discovery read running
