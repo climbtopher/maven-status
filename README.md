@@ -243,3 +243,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 23:56:17 UTC — Deploy 20205eb GREEN — worker on new image, services-stable. Session done: M089-M095 + M093 script shipped, worker pipeline reliable, main green.
 2026-06-24 01:03:59 UTC — Spec-writer running — M096 Gmail cursor-based polling
 2026-06-24 01:12:47 UTC — impl/m096 running — Gmail cursor-based polling fix
+2026-06-24 01:13:18 UTC — M096 PR #111 open — Gmail cursor-based polling (ongoing polls now after:last_polled_at). Fast gate green (870 pass). Stale-queue cleanup query reported for Chris to authorize post-merge.
