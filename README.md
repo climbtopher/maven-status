@@ -307,3 +307,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-24T22:56:28Z] deploy success: maven:a5cc670 (App Runner maven-api) — run 28134648310
 [2026-06-24T23:04:11Z] deploy success: maven:0899b93 (App Runner maven-api) — run 28134774191
 2026-06-24 23:04:33 UTC — Merged M098a (#120) + M098b (#121) HIGH-blast migrations sequentially. Both deploys green; migrations applied + gated on live DB. Found/fixed a self-inflicted conflict (duplicate review files) mid-run; reverted. Chris approved merge over independence caveat.
+2026-06-24 23:53:40 UTC — M100 un-stub BLOCKED: shipped M098b table lacks question_text + answer columns the M100 code/tests assume — escalating to Chris (no commit, no push)
