@@ -281,3 +281,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 15:39:37 UTC — D001 implementation PR opened — security-review attached, awaiting Gate 3
 2026-06-24 15:40:01 UTC — D001 + D002 implementation PRs opened — awaiting security-review + Gate 3
 2026-06-24 17:20:21 UTC — M098a + M098b + M099 specs drafted — awaiting Gate-2 review. M098a (children.grade + program_contacts.preferred_channel) + M098b (pending_questions table) both HIGH migrations; M099 Gmail discovery MEDIUM-HIGH, recommends FORWARD-ONLY v1 (historical sweep = Bug-17 risk), 3 open questions for Chris. No architecture contradictions.
+2026-06-24 17:34:04 UTC — M100 + M101a changes applied — all three Tier-1 specs Gate-2 approved
