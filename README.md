@@ -256,3 +256,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 12:10:02 UTC — Spec-writer running — M097 family knowledge map data model
 2026-06-24 12:14:27 UTC — M097 spec updated — composite FK added to program_contacts (structural cross-family guarantee)
 2026-06-24 12:29:29 UTC — Read-only architecture audit — reasoner, memory, dreaming, privacy, build plan, locked decisions
+2026-06-24 12:33:14 UTC — Architecture audit complete — reasoner chokepoint, locked decisions, build plan, memory/dreaming/privacy/extraction synthesized into full report
