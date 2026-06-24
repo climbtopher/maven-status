@@ -301,3 +301,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 19:28:40 UTC — Subagent sandbox diagnostic — environment comparison + trust assessment
 2026-06-24 19:33:43 UTC — PR #122 merged (6650e43) — dev MCP plist+IP fix live on main; plutil OK, placeholder clean, binds 100.70.190.35:8765
 2026-06-24 19:35:38 UTC — Dev MCP pre-flight pass 2 — GO: IP 100.70.190.35 matches, plist lints OK, 100.70.190.35:8765 free, mcp 1.28.0, dry-run binds real IP, no stray proc — ready for sudo load
+[2026-06-24T19:41:11Z] deploy success: maven:6650e43 (App Runner maven-api) — run 28124436472
