@@ -272,3 +272,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 14:51:47 UTC — M097 prod deploy watch — reporting migrate + promote status
 2026-06-24 14:52:11 UTC — D001 + D002 dev MCP specs drafted — awaiting Gate-2 review
 [2026-06-24T14:55:36Z] deploy success: maven:d82a1a9 (App Runner maven-api) — run 28107201658
+2026-06-24 14:57:03 UTC — M097 DEPLOYED & verified in prod: deploy 28107201658 GREEN (migrate exit 0 → promote). family_programs + program_contacts live with RLS enabled+forced + isolation policies; 4 additive columns + composite FK + UNIQUE present; delete_family covers both. App Runner + worker on d82a1a9.
