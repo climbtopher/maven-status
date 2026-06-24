@@ -251,3 +251,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 01:34:24 UTC — Session complete — Bug 17 fully closed, M096 live, main green
 2026-06-24 01:47:49 UTC — Old-mail approval cards cleared (18 rejected) — Approvals queue clean (0 pending for the test family)
 2026-06-24 07:00:02 UTC — Dream run complete — 0 auto-applied, 0 proposed
+2026-06-24 11:42:46 UTC — Read-only investigation — hatch + extraction pipeline audit (4 parallel readers: hatch flow, data model, extraction, entity map)
