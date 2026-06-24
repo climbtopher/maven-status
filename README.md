@@ -276,3 +276,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 15:10:16 UTC — D001 + D002 changes applied — awaiting implementation
 2026-06-24 15:11:44 UTC — MAVEN_CURRENT_STATE.md drafted — M097 Task 9 complete
 2026-06-24 15:28:16 UTC — D002 line 69 reconciled — bearer-token finding marked superseded
+2026-06-24 15:33:04 UTC — M098 + M100 + M101a specs drafted — awaiting Gate-2 review. FLAGS: M098 needs M097 follow-up (children.grade + program_contacts.preferred_channel have no column); M101a found 4 Binding-Principle-9 violations (child_token/confidence/rsvp/summary) — confidence move is the key M101b decision; M100 needs a new pending-questions table (HIGH migration).
