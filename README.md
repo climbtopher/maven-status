@@ -246,3 +246,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 01:13:18 UTC — M096 PR #111 open — Gmail cursor-based polling (ongoing polls now after:last_polled_at). Fast gate green (870 pass). Stale-queue cleanup query reported for Chris to authorize post-merge.
 [2026-06-24T01:23:25Z] deploy success: maven:5b7fc60 (App Runner maven-api) — run 28068425158
 2026-06-24 01:24:29 UTC — Merged M096 Gmail cursor-based polling (main 5b7fc60); deploy GREEN, worker on task-def :9 image (new). Stale queue cleanup pending Chris authorization: 2943 old (>30d) queued to delete, 1333 recent kept. NOTE: worker desiredCount=0 (not running).
+2026-06-24 01:27:42 UTC — Stale queue cleaned (2943 old jobs removed; 1333 recent kept) — worker scaled back to 1/1 with M096 cursor fix; verifying cursor-based polling
