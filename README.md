@@ -290,3 +290,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 18:38:06 UTC — D-track CI test fixed (PR #119) + M100 spec token reconciled (working-tree-only)
 2026-06-24 18:42:18 UTC — M098a + M098b orchestration started — both critical hazards pre-verified against live M097 (children@194, program_contacts@217 covered; M097 delete_family body = correct M098b base). Two isolated worktrees created (feat/m098a-hatch-schema-columns, feat/m098b-pending-questions-queue). Spawning 2 parallel migration agents.
 2026-06-24 18:46:32 UTC — D-track stale test already fixed + merged by concurrent session (PR #119); validated main green at b417cee — #116/#117/#118 unblocked
+2026-06-24 18:47:04 UTC — PR #119 merged — main green, Maven PRs unblocked
