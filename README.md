@@ -241,3 +241,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-23 23:49:14 UTC — Session complete — M089-M095 shipped, worker pipeline fixed, backfill horizon active, main green (20205eb). #106 (M093 provisioning script) merged; deploy 28064974361 in progress.
 [2026-06-23T23:55:35Z] deploy success: maven:20205eb (App Runner maven-api) — run 28064974361
 2026-06-23 23:56:17 UTC — Deploy 20205eb GREEN — worker on new image, services-stable. Session done: M089-M095 + M093 script shipped, worker pipeline reliable, main green.
+2026-06-24 01:03:59 UTC — Spec-writer running — M096 Gmail cursor-based polling
