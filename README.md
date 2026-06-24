@@ -304,3 +304,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-24T19:41:11Z] deploy success: maven:6650e43 (App Runner maven-api) — run 28124436472
 [2026-06-24T20:09:52Z] deploy success: maven:f625318 (App Runner maven-api) — run 28126033135
 2026-06-24 20:16:18 UTC — M098b security-review (mechanical re-verification of committed PR #121): APPROVE. delete_family delta = live M097 body + ONLY pending_questions leaf, 0 tables dropped, hardening byte-identical, leaf correctly placed. All 9 checks PASS. Doc pushed to branch; PR still OPEN, not merged — Gate 3 with Chris.
+[2026-06-24T22:56:28Z] deploy success: maven:a5cc670 (App Runner maven-api) — run 28134648310
