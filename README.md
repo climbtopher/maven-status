@@ -286,3 +286,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-24T17:51:30Z] deploy success: maven:97c597c (App Runner maven-api) — run 28118060618
 [2026-06-24T17:58:51Z] deploy success: maven:38a7bcd (App Runner maven-api) — run 28118137997
 2026-06-24 18:17:26 UTC — M101a #116 + M100 #117 + M098 #118 PRs OPEN; each PR's own tests + isolation-gate + memory-isolation-gate + iOS build + security-review APPROVE all GREEN. BUT fast-gate RED on all three (and on main 38a7bcd) due to ONE pre-existing D-track stale test test_mcp_dev_server.py:124 (asserts D001 unmerged, but D001 merged via #115). Not caused by the 3 PRs. Needs a 1-line D-track test fix to unblock. Flags: M101a confidence→discard (must land WITH M101b); M100 trigger token time_based vs M098b time_sensitive (spec needs 1-line reconcile).
+2026-06-24 18:31:09 UTC — Stale D-worktrees cleaned + D-track CI test fix status checked
