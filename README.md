@@ -274,3 +274,4 @@ the panel's "Recent Activity" renders the latest of them.
 [2026-06-24T14:55:36Z] deploy success: maven:d82a1a9 (App Runner maven-api) — run 28107201658
 2026-06-24 14:57:03 UTC — M097 DEPLOYED & verified in prod: deploy 28107201658 GREEN (migrate exit 0 → promote). family_programs + program_contacts live with RLS enabled+forced + isolation policies; 4 additive columns + composite FK + UNIQUE present; delete_family covers both. App Runner + worker on d82a1a9.
 2026-06-24 15:10:16 UTC — D001 + D002 changes applied — awaiting implementation
+2026-06-24 15:11:44 UTC — MAVEN_CURRENT_STATE.md drafted — M097 Task 9 complete
