@@ -270,3 +270,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 14:47:56 UTC — D001 dev-MCP-server-core spec drafted (Gate 2). Streamable-HTTP read-only server, 8 tools (read_file/list_files/search_files/get_pr_status/get_open_prs/get_worktree_status/get_spec_status/get_migration_status). Repo-root path-confinement + secret denylist (fail-closed) + read-only + no DB/AWS = the load-bearing guards. MCP SDK in requirements-dev.txt (not prod). MEDIUM blast, security-review REQUIRED. Supersedes M000. Deployment=D002. Proceeding to D002 research.
 2026-06-24 14:48:27 UTC — M097 merged — Gate 3 complete
 2026-06-24 14:51:47 UTC — M097 prod deploy watch — reporting migrate + promote status
+2026-06-24 14:52:11 UTC — D001 + D002 dev MCP specs drafted — awaiting Gate-2 review
