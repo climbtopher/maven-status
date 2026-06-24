@@ -306,3 +306,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 20:16:18 UTC — M098b security-review (mechanical re-verification of committed PR #121): APPROVE. delete_family delta = live M097 body + ONLY pending_questions leaf, 0 tables dropped, hardening byte-identical, leaf correctly placed. All 9 checks PASS. Doc pushed to branch; PR still OPEN, not merged — Gate 3 with Chris.
 [2026-06-24T22:56:28Z] deploy success: maven:a5cc670 (App Runner maven-api) — run 28134648310
 [2026-06-24T23:04:11Z] deploy success: maven:0899b93 (App Runner maven-api) — run 28134774191
+2026-06-24 23:04:33 UTC — Merged M098a (#120) + M098b (#121) HIGH-blast migrations sequentially. Both deploys green; migrations applied + gated on live DB. Found/fixed a self-inflicted conflict (duplicate review files) mid-run; reverted. Chris approved merge over independence caveat.
