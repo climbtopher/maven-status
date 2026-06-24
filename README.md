@@ -271,3 +271,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 14:48:27 UTC — M097 merged — Gate 3 complete
 2026-06-24 14:51:47 UTC — M097 prod deploy watch — reporting migrate + promote status
 2026-06-24 14:52:11 UTC — D001 + D002 dev MCP specs drafted — awaiting Gate-2 review
+[2026-06-24T14:55:36Z] deploy success: maven:d82a1a9 (App Runner maven-api) — run 28107201658
