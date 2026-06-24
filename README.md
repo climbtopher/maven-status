@@ -261,3 +261,4 @@ the panel's "Recent Activity" renders the latest of them.
 2026-06-24 13:32:28 UTC — M097 spec finalized — three changes applied, awaiting implementation
 2026-06-24 13:39:08 UTC — MCP track — discovery read running
 2026-06-24 13:42:54 UTC — M097 migration authored (migration agent): migrations/M097_family_knowledge_map.sql + tests/test_m097_migration.py. Additive/reversible/family_id-scoped; 18 static tests + fast gate (888) green; coverage guard holds. NOT committed — HIGH blast radius awaiting security-review + tenant-isolation-check.
+2026-06-24 14:01:13 UTC — M097 PR #113 open — security review APPROVE; CI green (fast-gate, isolation-gate, memory-isolation-gate); MERGEABLE/CLEAN. Awaiting Gate-3 (Chris).
